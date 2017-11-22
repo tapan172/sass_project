@@ -1,2 +1,3 @@
 # sass_project
-git hub project
+TestGithub is a repository for showing the bare minimneuver , function , etc.
+
