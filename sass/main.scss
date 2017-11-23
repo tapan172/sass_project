@@ -1,12 +1,123 @@
 @import "reset";
-#box
-{
-border:1px solid black;
-	h1
-	{
-	  color:red;
-	  vertical-align:middle;
+@import "footer";
 
+$background-color:#63b1bc;
+$background-color-1:#666666;
+$background-color-2:#000000;
+
+body
+{
+	display:flex;
+	flex-wrap:wrap;
+}
+
+#main-content
+{
+	// padding:10%;
+    flex: 1 1 80%;
+    min-height: 100vh;
+        padding: 14px 0 60px 0;
+		._second_half
+		{
+		  height: 100%;
+		  background-color:$background-color;
+		}
+	.container
+	{
+		    margin-left: 0;
+   			 padding: 0;
+
+   			 .pull-right
+   			 {  
+                width: 533px;
+                height: 100%;
+                background-color:$background-color;
+   			 } 
+
+	   .portfolio
+	   {
+         display: grid;
+         height: 100%;
+         grid-template-rows: repeat(6,1fr);
+         grid-template-columns: repeat(5,1fr);
+         grid-gap:20px;
+
+		    .portfolio-item
+			{
+			  background-color: $background-color;
+			  display: flex;
+			  justify-content: center;
+			  align-items:center; 
+			  padding:50px;
+			  color: white;
+			  background-blend-mode:multiply;
+			  font-size:1.5em;
+              
+              &.small
+			  {
+			  	grid-row: span 1;
+			  	grid-column: span 1;
+
+			  }
+              
+			  &.mediam
+			  {
+			  	grid-row: span 2;
+			  	grid-column: span 2;
+
+			  }
+			  &.large
+			  {
+			  	grid-row:span 3;
+			  	grid-column: span 3;
+
+			  }
+
+			  &.tall
+			  {
+			  	grid-row:span 3;
+			  	grid-column:span 2;
+			  }
+			  &.wide
+			  {
+			  	grid-row:span 2;
+			  	grid-column:span 3;
+			  }
+
+			}
+			.two
+			{
+				background-image: url(../images/Koala.jpg);
+				background-color: $background-color-1;
+				background-size: cover;
+				background-position: top left;
+				transition: all ease-in-out 300ms;
+				position: relative;
+				z-index: 10;
+
+				&::before
+				{
+				  content:'';
+				  display: block;
+				  opacity: 0.4;
+				  background:$background-color-2;
+				  position: absolute;
+				  top:0;
+				  right: 0;
+				  bottom:0;
+				  left: 0;
+				  transition: all ease-in-out 300ms;
+				  z-index: -1;
+				}
+
+				&:hover::before
+				{
+					opacity: 0.1;
+				}
+			}
+		}
 	}
 
 }
+
+
