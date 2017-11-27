@@ -1,162 +1,196 @@
 @import "reset";
 @import "footer";
+@import "designer_helper";
 
-$background-color:#141424;
-$background-color-1:#666666;
-$background-color-2:#000000;
+$background-color: #141424;
+$background-color-1: #666666;
+$background-color-2: #000000;
 
-body
-{
-	display:flex;
-	flex-wrap:wrap;
+$color-white: #fff;
+
+$font-size-main: 32px;
+$font-bold-main: 900;
+
+$letter-space: 10px;
+$line-height: 100px;
+
+$z-depth-2: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+body {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#main-content
-{
-	// padding:10%;
-    flex: 1 1 80%;
-    min-height: 100vh;
-        padding: 14px 0 60px 0;
-		._second_half
-		{
-		  height: 100%;
-		  background-color:$background-color;
-		  
-		 		  .logo_company
-				  {
-				  	width:100%;
-            		height:100%;
-            		margin:112px; 
-				  }
-		  
-		}
-	.container
-	{
-		    margin-left: 0;
-   			 padding: 0;
+#main-content {
+  // padding:10%;
+  flex: 1 1 80%;
+  min-height: 100vh;
+  padding: 14px 0 60px 0;
+  ._second_half {
+    height: 100%;
+    background-color: $background-color;
 
-   			 .pull-right
-   			 {  
-                width: 533px;
-                height: 100%;
-                background-color:$background-color;
-   			 } 
+    .logo_company {
+      width: 100%;
+      height: 100%;
+      margin: 112px;
+    }
 
-	   .portfolio
-	   {
-         display: grid;
-         height: 100%;
-         grid-template-rows: repeat(6,1fr);
-         grid-template-columns: repeat(5,1fr);
-         grid-gap:20px;
+  }
+  .container {
+    margin-left: 0;
+    padding: 0;
 
-		    .portfolio-item
-			{
-			  background-color: $background-color;
-			  display: flex;
-			  justify-content: center;
-			  align-items:center; 
-			  padding:50px;
-			  color: white;
-			  background-blend-mode:multiply;
-			  font-size:1.5em;
-              
-              &.small
-			  {
-			  	grid-row: span 1;
-			  	grid-column: span 1;
+    .pull-right {
+      width: 533px;
+      height: 100%;
+      background-color: $background-color;
+    }
 
-			  }
-              
-			  &.mediam
-			  {
-			  	grid-row: span 2;
-			  	grid-column: span 2;
+    .portfolio {
+      display: grid;
+      height: 100%;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 20px;
 
-			  }
-			  &.large
-			  {
-			  	grid-row:span 3;
-			  	grid-column: span 3;
+      .portfolio-item {
+        background-color: $background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        color: white;
+        background-blend-mode: multiply;
+        font-size: 1.5em;
 
-			  }
+        &.small {
+          grid-row: span 1;
+          grid-column: span 1;
 
-			  &.tall
-			  {
-			  	grid-row:span 3;
-			  	grid-column:span 2;
-			  }
-			  &.wide
-			  {
-			  	grid-row:span 2;
-			  	grid-column:span 3;
-			  }
+        }
 
-			}
-			.all-box
-			{
-				background-color: $background-color-1;
-				background-size: cover;
-				background-position: top left;
-				transition: all ease-in-out 300ms;
-				position: relative;
-				z-index: 10;
+        &.mediam {
+          grid-row: span 2;
+          grid-column: span 2;
 
-				&::before
-				{
-				  content:'';
-				  display: block;
-				  opacity: 0.4;
-				  background:$background-color-2;
-				  position: absolute;
-				  top:0;
-				  right: 0;
-				  bottom:0;
-				  left: 0;
-				  transition: all ease-in-out 300ms;
-				  z-index: -1;
-				}
+        }
+        &.large {
+          grid-row: span 3;
+          grid-column: span 3;
 
-				&:hover::before
-				{
-					opacity: 0.1;
-				}
-			}
-			.one 
-			{
-				background-image: url(../images/about.jpg);
-				
-			}
-			.two 
-			{
-				background-image: url(../images/port_folio.jpg);
-				
-			}
-			.three
-			{
-				background-image: url(../images/services.jpg);
-				
-			}
-			.four
-			{
-				background-image: url(../images/client.jpg);
-				
-			}
-			.five
-			{
-				background-image: url(../images/our_team.jpg);
-				
-			}
-			.six
-			{
-				background-image: url(../images/contact_us_inner.jpg);
-				
-			}
+        }
 
+        &.tall {
+          grid-row: span 3;
+          grid-column: span 2;
+        }
+        &.wide {
+          grid-row: span 2;
+          grid-column: span 3;
+        }
 
-		}
-	}
+      }
+      .all-box {
+        background-color: $background-color-1;
+        background-size: cover;
+        background-position: top left;
+        transition: all ease-in-out 300ms;
+        position: relative;
+        z-index: 10;
+
+        &::before {
+          content: '';
+          display: block;
+          opacity: 0.4;
+          background: $background-color-2;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transition: all ease-in-out 300ms;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          opacity: 0.1;
+        }
+      }
+      .one {
+        background-image: url(../images/about.jpg);
+
+      }
+      .two {
+        background-image: url(../images/port_folio.jpg);
+
+      }
+      .three {
+        background-image: url(../images/services.jpg);
+
+      }
+      .four {
+        background-image: url(../images/client.jpg);
+
+      }
+      .five {
+        background-image: url(../images/our_team.jpg);
+
+      }
+      .six {
+        background-image: url(../images/contact_us_inner.jpg);
+
+      }
+
+    }
+  }
 
 }
 
+#contact-content {
+  height: 100%;
+  width: 100%;
 
+  .container {
+    margin: 200px;
+    box-shadow: $z-depth-2;
+
+    .top-section {
+      h1 {
+        font-size: $font-size-main;
+        font-weight: $font-bold-main - 100;
+      }
+      p {
+        font-size: $font-size-main - 16px;
+        letter-spacing: $letter-space - 8px;
+      }
+      .contact-address {
+        line-height: $line-height - 50px;
+      }
+    }
+
+    .aside-section {
+      box-shadow: $z-depth-2;
+    }
+
+    .bottom-section {
+      background-color: $background-color;
+      color: $color-white;
+      .social-icons {
+        padding: 40px;
+        letter-spacing: 32px;
+        font-size: 30px;
+      }
+      .bottom-nav {
+        ul {
+          display: inline-flex;
+          text-align: center;
+          li {
+            padding-left: 62px;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+}
