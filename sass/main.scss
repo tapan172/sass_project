@@ -22,10 +22,9 @@ body {
 }
 
 #main-content {
-  // padding:10%;
   flex: 1 1 80%;
   min-height: 100vh;
-  padding: 14px 0 60px 0;
+  padding: 10px 0 60px 0;
   ._second_half {
     height: 100%;
     background-color: $background-color;
@@ -33,7 +32,20 @@ body {
     .logo_company {
       width: 100%;
       height: 100%;
-      margin: 112px;
+      margin: 61px 112px;
+    }
+    .top-section {
+      .contact-address {
+        line-height: $line-height - 50px;
+        span, i {
+          color: $color-white;
+
+        }
+      }
+      .social-icons {
+        color: $color-white;
+        font-size: 18px;
+      }
     }
 
   }
@@ -59,7 +71,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 50px;
+        padding: 39px;
         color: white;
         background-blend-mode: multiply;
         font-size: 1.5em;
@@ -150,15 +162,17 @@ body {
 #contact-content {
   height: 100%;
   width: 100%;
-
+  background-image: url(../images/contact_us_new.jpg);
   .container {
     margin: 200px;
+    margin-top: 50px;
     box-shadow: $z-depth-2;
 
     .top-section {
       h1 {
         font-size: $font-size-main;
         font-weight: $font-bold-main - 100;
+        color: $background-color;
       }
       p {
         font-size: $font-size-main - 16px;
@@ -166,11 +180,35 @@ body {
       }
       .contact-address {
         line-height: $line-height - 50px;
+        span i {
+          color: $background-color;
+          font-size: 20px;
+        }
       }
     }
 
     .aside-section {
       box-shadow: $z-depth-2;
+      h1 {
+        font-size: $font-size-main;
+        font-weight: $font-bold-main - 100;
+      }
+      .form-horizontal {
+        input {
+          border-radius: 1px;
+          height: 45px;
+        }
+        textarea {
+          border-radius: 1px;
+        }
+        .btn {
+          border-radius: 1px;
+          width: 100%;
+          height: 45px;
+          background-color: $background-color;
+          color: $color-white;
+        }
+      }
     }
 
     .bottom-section {
@@ -180,6 +218,7 @@ body {
         padding: 40px;
         letter-spacing: 32px;
         font-size: 30px;
+        opacity: 0.3;
       }
       .bottom-nav {
         ul {
@@ -187,7 +226,6 @@ body {
           text-align: center;
           li {
             padding-left: 62px;
-            opacity: 0.3;
           }
         }
       }
